@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login and Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="login-body">
+    <div class="decoration">
+      <img src="/login/images/5500661-removebg-preview.png" />
+    </div>
+    <div class="login-container">
+      <h1 style="color: white">WELCOME BUDDY!</h1>
+      <div class="form-container">
+        <form class="login-form" id="login-form">
+          <h2>Login</h2>
+          <input type="text" id="text" placeholder="Username" />
+          <input type="password" id="password" placeholder="Password" />
+          <div class="forget">
+            <a href="/login/forgetpass.html">ForgetPassword</a>
+          </div>
+          <div class="button"><button type="submit">Login</button></div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // const form = document.getElementById("login-form");
+      const form = document.querySelector(".login-form");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const username = form.elements["text"].value;
+        const password = form.elements["password"].value;
+
+        if (username === "" || password === "") {
+          alert("Please fill in all fields");
+        } else {
+          window.location.replace("index.html");
+        }
+      });
+    </script>
+  </body>
+</html>

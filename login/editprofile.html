@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="edit-profile-body" style="background-color: #f7f6f6" ;>
+    <div class="ddd">
+      <ul class="index-ul">
+        <a><img src="/login//images/logo.png" /></a>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="profile.html">PROFILE</a></li>
+        <li><a href="catagory.html">CATEGORY</a></li>
+        <li><a class="active" href="askquestion.html">ASKQUESTION</a></li>
+      </ul>
+    </div>
+    <div class="header-banner-profile">
+      <span class="profile-banner-img"
+        ><img class="profile-banner-img" src="/login/images/avatar.png.png"
+      /></span>
+      <span class="profile-name"
+        ><h4 style="margin: 0">
+          <span class="banner-name"></span
+          ><span class="context2" style="padding: 2px; margin-left: 5px">
+            Enlightened</span
+          >
+        </h4>
+      </span>
+      <span class="profile-tag"
+        ><p style="color: white; font-size: medium">
+          Software Developer at Solartis
+        </p></span
+      >
+    </div>
+    <div class="edit-profile-content">
+      <div
+        class="column2-catagory"
+        style="background-color: white; width: 100%"
+      >
+        <img class="index-column1-image" src="/login/logo/home (2).png" />
+        <a class="index-column1-text" href="/login/index.html"
+          >Home/ <span style="color: black">Editprofile</span></a
+        >
+      </div>
+      <form id="edit-form">
+        <div class="addpostform">
+          <div class="addpostform-sub">
+            <label for="firstName" style="text-align: left">FirstName</label>
+            <input
+              type="text"
+              id="firstName"
+              name="fname"
+              style="width: 100%; border: 1px solid gray"
+              placeholder="Please type your username"
+              required
+            />
+          </div>
+
+          <div class="addpostform-sub">
+            <label for="lastName" style="text-align: left">LastName</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lname"
+              style="width: 100%; border: 1px solid gray"
+              placeholder="Please type your Lastname"
+              required
+            />
+          </div>
+
+          <div class="addpostform-sub">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              style="width: 100%; border: 1px solid gray"
+              placeholder="Please type your email"
+              required
+            />
+          </div>
+
+          <div class="profile-imagefull-container">
+            <div class="profile-image-wrapper">
+              <img
+                id="profile-image"
+                src="/login/images/avatar.png.png"
+                alt="Profile Image"
+                name="image"
+              />
+            </div>
+            <div class="addpostform-sub">
+              <input id="profile-image-input" type="file" accept="image/*" />
+              <button id="change-profile-image-btn">
+                Change Profile Image
+              </button>
+            </div>
+          </div>
+
+          <div class="addpostform-sub" style="padding: 6px">
+            <div>Gende</div>
+            <label>
+              <input type="radio" name="gender" value="male" id="gender" />
+              Male
+            </label>
+            <label>
+              <input type="radio" name="gender" value="female" id="gender" />
+              Female
+            </label>
+            <label>
+              <input type="radio" name="gender" value="other" id="gender" />
+              Other
+            </label>
+          </div>
+
+          <!-- <div class="addpostform-sub">
+            <label for="country">Country</label>
+            <div class="profile-dropdown" style="width: 100%">
+              <div
+                class="custom-select"
+                style="width: 100%; display: block; font-size: 14px"
+              >
+                <select
+                  name="country"
+                  id="country"
+                  style="width: 100%; padding: 10px"
+                >
+                  <option value="0">India</option>
+                  <option value="1">Australia</option>
+                  <option value="2">America</option>
+                </select>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="addpostform-sub">
+            <label for="country">Country</label>
+            <div class="profile-dropdown" style="width: 100%">
+              <div
+                class="custom-select"
+                style="width: 100%; display: block; font-size: 14px"
+              >
+                <select
+                  name="country"
+                  id="country"
+                  style="width: 100%; padding: 10px"
+                >
+                  <option value="0">India</option>
+                  <option value="1">Australia</option>
+                  <option value="2">America</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="addpostform-sub">
+            <label for="phone">Enter a phone number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+91-1234567890"
+              required
+              style="border: 2px solid gray"
+            /><br /><br />
+          </div>
+
+          <div class="addpostform-sub">
+            <label for="detail">Details</label>
+            <textarea
+              id="detail"
+              id="post-content"
+              name="detail"
+              style="width: 100%; height: 300px"
+            ></textarea>
+          </div>
+          <div class="addpostform-sub">
+            <label for="custom-category">Custom Category</label>
+            <div class="profile-dropdown" style="width: 100%">
+              <div
+                class="custom-select"
+                id="custom-category"
+                style="width: 100%; display: block; font-size: 14px"
+              >
+                <select
+                  style="width: 100%; padding: 10px"
+                  name="category"
+                  id="category"
+                >
+                  <option value="0">Programmers</option>
+                  <option value="1">Management</option>
+                  <option value="2">University</option>
+                  <option value="2">Analytics</option>
+                  <option value="2">Language</option>
+                  <option value="2">Communications</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="addpostform-sub">
+            <div class="save">
+              <button class="publish" type="submit">save</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const profileImage = document.getElementById("profile-image");
+      const profileImageInput = document.getElementById("profile-image-input");
+      const changeProfileImageBtn = document.getElementById(
+        "change-profile-image-btn"
+      );
+
+      changeProfileImageBtn.addEventListener("click", () => {
+        profileImageInput.click();
+      });
+
+      profileImageInput.addEventListener("change", () => {
+        const file = profileImageInput.files[0];
+
+        if (file) {
+          const reader = new FileReader();
+
+          reader.addEventListener("load", () => {
+            profileImage.src = reader.result;
+          });
+
+          reader.readAsDataURL(file);
+        }
+      });
+
+      const form = document.getElementById("edit-form");
+      const submitButton = form.querySelector('button[type="submit"]');
+      submitButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const firstname = form.elements["firstName"].value;
+        const lastname = form.elements["lastName"].value;
+        const email = form.elements["email"].value;
+        const gender = form.elements["gender"].value;
+        const content = form.elements["detail"].value;
+
+        if (firstname === "" || email === "") {
+          alert("Please fill in all the fields");
+        } else {
+          const countrySelect = document.querySelector("#country");
+          const selectedIndex = countrySelect.selectedIndex;
+          const categorySelect = document.querySelector("#category");
+          const selectIndex = categorySelect.selectedIndex;
+
+          const gender = form.querySelector(
+            'input[name="gender"]:checked'
+          ).value;
+          const fileInput = document.getElementById("profile-image-input");
+          const image = fileInput.files[0];
+          formData.append("image", image);
+
+          if (selectedIndex >= 0) {
+            const selectedCountry = countrySelect.options[selectedIndex].text;
+            const selectedCategory = categorySelect.options[selectIndex].text;
+            const post = {
+              firstname: formData.get("fname"),
+              lastname: formData.get("lname"),
+              email: formData.get("email"),
+              content: formData.get("detail"),
+              number: formData.get("phone"),
+              country: selectedCountry,
+              category: selectedCategory,
+              gender: gender,
+            };
+            localStorage.setItem("post", JSON.stringify(post));
+            form.reset();
+            alert("Post submitted successfully!");
+          } else {
+            alert("Please select a country");
+          }
+        }
+      });
+      const post = JSON.parse(localStorage.getItem("post"));
+      const bannername = document.querySelector(".banner-name");
+      bannername.innerHTML = `${post.firstname}`;
+    </script>
+  </body>
+</html>

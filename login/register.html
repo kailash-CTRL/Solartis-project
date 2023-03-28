@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/login/style.css" />
+  </head>
+  <body class="register-body">
+    <div class="decoration">
+      <img src="/login/images/5500661-removebg-preview.png" />
+    </div>
+    <div class="register-container">
+      <div class="form-container">
+        <form class="register-form">
+          <h2>Register</h2>
+          <input type="text" id="text" placeholder="Username" />
+          <input type="email" id="email" placeholder="Email" />
+          <input type="password" id="password" placeholder="Password" />
+          <input
+            type="confirm-password"
+            id="confirm-password"
+            placeholder="Confirm Password"
+          />
+          <p>
+            Already have account please
+            <a class="goto" href="/login/login.html"> Login</a>
+          </p>
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      const form = document.querySelector(".register-form");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const username = form.elements["text"].value;
+        const email = form.elements["email"].value;
+        const password = form.elements["password"].value;
+        const confirmPassword = form.elements["confirm-password"].value;
+
+        if (
+          username === "" ||
+          email === "" ||
+          password === "" ||
+          confirmPassword === ""
+        ) {
+          alert("Please fill in all the fields");
+        } else if (password !== confirmPassword) {
+          alert("Passwords do not match");
+        } else {
+          window.location.replace("index.html");
+        }
+      });
+    </script>
+  </body>
+</html>
